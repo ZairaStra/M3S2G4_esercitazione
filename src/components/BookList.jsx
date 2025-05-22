@@ -36,7 +36,7 @@ const BookList = ({ books }) => {
             {books
               .filter((b) => b.title.toLowerCase().includes(searchQuery))
               .map((b) => (
-                <Col xs={12} md={4} key={b.asin}>
+                <Col xs={12} md={4} key={b.asin} data-testid="singleBook">
                   <SingleBook book={b} selectedBook={selectedBook} changeSelectedBook={changeSelectedBook} />
                 </Col>
               ))}
